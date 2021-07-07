@@ -6,11 +6,12 @@ body {
   color: #4d4d4d;
   background-color: #fff;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .container {
-  width: 1300px;
-  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -21,20 +22,38 @@ body {
   height: 353px;
 }
 
+@media (max-width: 1200px) {
+  .hero {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    margin-bottom: 50px;
+  }
+}
+
 .hero-2 {
   padding: 100px 0;
+}
+
+@media (max-width: 1200px) {
+  .hero-2 {
+    padding: 0;
+  }
 }
 
 a i {
   font-size: 15px;
 }
 
-/*!
- * Bootstrap v5.0.1 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10396,6 +10415,10 @@ fieldset:disabled .btn {
   width: 110px;
 }
 
+.header__logo-small {
+  width: 120px;
+}
+
 .header i {
   font-size: 30px;
 }
@@ -10409,8 +10432,16 @@ fieldset:disabled .btn {
   color: #b56953;
 }
 
+.header__rwd {
+  padding: 20px;
+}
+
+.header__rwd i {
+  font-size: 24px;
+}
+
 .jumbotron__container {
-  width: 95vw;
+  width: 100%;
   height: 700px;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), url(../img/jumbotron01.jpg);
   background-position: center;
@@ -10436,6 +10467,18 @@ fieldset:disabled .btn {
   color: #000;
 }
 
+@media (max-width: 992px) {
+  .jumbotron__title {
+    font-size: 53px;
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron__title {
+    font-size: 43px;
+  }
+}
+
 .jumbotron__booking {
   background-color: #faf9f5;
   padding: 24px;
@@ -10449,6 +10492,13 @@ fieldset:disabled .btn {
   background-color: #faf9f5;
 }
 
+@media (max-width: 1400px) {
+  .jumbotron__booking input,
+  .jumbotron__booking select {
+    width: 200px;
+  }
+}
+
 .jumbotron__booking option {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 17px;
@@ -10458,12 +10508,12 @@ fieldset:disabled .btn {
 .form-btn {
   width: 232px;
   height: 50px;
+  padding: 0.75rem;
   font-family: Raleway, sans-serif;
   font-weight: 500;
   font-size: 12px;
   letter-spacing: 0.25em;
   line-height: 2em;
-  padding: 0.75rem;
 }
 
 .rooms {
@@ -10473,6 +10523,12 @@ fieldset:disabled .btn {
 .rooms__container {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+@media (max-width: 1200px) {
+  .rooms__container {
+    padding: 60px;
+  }
 }
 
 .rooms__card-info {
@@ -10508,6 +10564,10 @@ fieldset:disabled .btn {
   left: 570px;
 }
 
+.rules {
+  margin-bottom: 120px;
+}
+
 .rules__textbox {
   background-color: #faf9f5;
   width: 40%;
@@ -10526,12 +10586,24 @@ fieldset:disabled .btn {
   font-size: 14px;
 }
 
+@media (max-width: 768px) {
+  .rules__textbox {
+    width: 60%;
+  }
+}
+
 .feature {
   margin-bottom: 120px;
 }
 
 .feature i {
   font-size: 72px;
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    margin-bottom: 200px;
+  }
 }
 
 .gallery__bg {
@@ -10542,16 +10614,40 @@ fieldset:disabled .btn {
   top: 100px;
 }
 
+@media (max-width: 1200px) {
+  .gallery__bg {
+    display: none;
+  }
+}
+
 .gallery__img {
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .slide {
+    background-color: #faf9f5;
+  }
 }
 
 .review {
   margin-bottom: 80px;
 }
 
+@media (max-width: 1400px) {
+  .review__card {
+    width: 80%;
+  }
+}
+
 .blog {
   margin-bottom: 120px;
+}
+
+@media (max-width: 1200px) {
+  .blog__card {
+    padding: 40px;
+  }
 }
 
 .blog__img {
