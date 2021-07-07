@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alloggio - Hotel Booking Theme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;500&family=Josefin+Sans:wght@300;500&family=Raleway:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <header class="header d-flex justify-content-between align-items-center">
+      <div class="header__weather d-flex align-items-center">
+        <p class="header__weather-city m-0 me-3">Rome</p>
+        <i class="ion-ios-sunny-outline me-2"></i>
+        <p class="header__weather-temp m-0">28°C</p>
+      </div>
+      <div class="header__nav">
+        <ul class="d-flex align-items-center m-0 list-unstyled">
+          <li class="header__nav-item mx-4">
+            <a
+              href="#"
+              class="
+                header__nav-link
+                text-decoration-none text-uppercase
+                active
+              "
+              >Home</a
+            >
+          </li>
+          <li class="header__nav-item mx-4">
+            <a
+              href="#"
+              class="header__nav-link text-decoration-none text-uppercase"
+              >Rooms</a
+            >
+          </li>
+          <li class="header__nav-item mx-4">
+            <a
+              href="#"
+              class="header__nav-link text-decoration-none text-uppercase"
+              >Pages</a
+            >
+          </li>
+          <li class="header__nav-item mx-4">
+            <a href="#"
+              ><img src="img/logo-default.png" alt="" class="header__logo"
+            /></a>
+          </li>
+          <li class="header__nav-item mx-4">
+            <a
+              href="#"
+              class="header__nav-link text-decoration-none text-uppercase"
+              >Gallery</a
+            >
+          </li>
+          <li class="header__nav-item mx-4">
+            <a
+              href="#"
+              class="header__nav-link text-decoration-none text-uppercase"
+              >Blog</a
+            >
+          </li>
+          <li class="header__nav-item mx-4">
+            <a
+              href="#"
+              class="header__nav-link text-decoration-none text-uppercase"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <p class="header__email m-0">
+        <a href="#" class="header__email-link text-decoration-none">
+          alloggio@qode.com
+        </a>
+      </p>
+    </header>
+    <section class="jumbotron">
+      <div class="jumbotron__container position-relative">
+        <div
+          class="
+            jumbotron__text
+            position-absolute
+            top-50
+            start-50
+            translate-middle
+            text-center
+          "
+        >
+          <h1 class="jumbotron__title">
+            Exceptional Attention to Every Little Detail
+          </h1>
+          <a
+            href="#"
+            class="
+              btn btn-primary
+              text-uppercase text-white
+              jumbotron__text-btn
+            "
+            >view more</a
+          >
+        </div>
+      </div>
+
+      <div class="jumbotron__booking d-flex align-items-end container">
+        <div class="form-check-in mx-2">
+          <label for="checkin">CHECK-IN</label>
+          <input
+            type="date"
+            name="checkin"
+            id="checkin"
+            class="form-control"
+            value="2021-07-01"
+          />
+        </div>
+        <div class="form-check-out mx-2">
+          <label for="checkout">CHECK-OUT</label>
+          <input
+            type="date"
+            name="checkout"
+            id="checkout"
+            class="form-control"
+            value="2021-07-01"
+          />
+        </div>
+        <div class="form-room mx-2">
+          <label for="room">ROOMS</label>
+          <select name="room" id="room" class="form-select">
+            <option selected value="1">1 Room</option>
+            <option value="2">2 Room</option>
+            <option value="3">3 Room</option>
+            <option value="4">4 Room</option>
+            <option value="5">5 Room</option>
+            <option value="6">6 Room</option>
+            <option value="7">7 Room</option>
+          </select>
+        </div>
+        <div class="form-guest mx-4">
+          <label for="guest">Guests</label>
+          <select name="guest" id="guest" class="form-select">
+            <option selected value="1">1 Adult</option>
+            <option value="2">2 Adult</option>
+            <option value="3">3 Adult</option>
+            <option value="4">4 Adult</option>
+          </select>
+        </div>
+        <a href="#" class="btn btn-outline-dark mx-2 form-btn">BOOK NOW</a>
+      </div>
+    </section>
+    <div class="hero text-center">
+      <h3 class="mb-3 h1">Urban Spirit of Helsinki</h3>
+      <p class="m-0 h4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <section class="rooms">
+      <div class="rooms__container row position-relative">
+        <div class="col-6 rooms__card--1">
+          <div>
+            <div class="rooms__card-img">
+              <img src="img/h1-room-img-01.jpg" alt="Room01" />
+            </div>
+            <div class="rooms__card-info py-4">
+              <div class="rooms__card-header d-flex justify-content-between">
+                <h3 class="rooms__card-title h2 mb-1">Bright Suite</h3>
+                <div class="rooms__card-price h5">
+                  from <span class="h2 fw-light">$105</span>
+                </div>
+              </div>
+              <p class="rooms__card-ppl h5">50m2 / 2-4person</p>
+              <p class="rooms__card-des mb-4">
+                Ut et rhoncus odio. Quisque pellentesque nisl leo, eget
+                ultricies nibh ullamcorper ut. Curabitur bibendum sed neque quis
+                rhoncus
+              </p>
+              <a href="#" class="text-decoration-none color-black link"
+                >BOOK NOW
+                <span class="ms-1"><i class="ion-ios-plus-empty"></i></span
+              ></a>
+            </div>
+          </div>
+          <div class="bg-custom bg--1"></div>
+        </div>
+        <div class="col-6 rooms__card--2">
+          <div>
+            <div class="rooms__card-img">
+              <img src="img/h1-room-img-02.jpg" alt="Room02" />
+            </div>
+            <div class="rooms__card-info py-4">
+              <div class="rooms__card-header d-flex justify-content-between">
+                <h2 class="rooms__card-title h2 mb-1">Bright Suite</h2>
+                <div class="rooms__card-price h5">
+                  from <span class="h2 fw-light">$105</span>
+                </div>
+              </div>
+              <p class="rooms__card-ppl h5">50m2 / 2-4person</p>
+              <p class="rooms__card-des mb-4">
+                Ut et rhoncus odio. Quisque pellentesque nisl leo, eget
+                ultricies nibh ullamcorper ut. Curabitur bibendum sed neque quis
+                rhoncus
+              </p>
+              <a href="#" class="text-decoration-none color-black link"
+                >BOOK NOW<span class="ms-1"
+                  ><i class="ion-ios-plus-empty"></i></span
+              ></a>
+            </div>
+          </div>
+          <div class="bg-custom bg--2"></div>
+        </div>
+      </div>
+    </section>
+    <section class="rules">
+      <div class="container p-0 position-relative">
+        <div class="rules__textbox position-absolute p-4">
+          <h3 class="h2">House Rules</h3>
+          <p class="mb-4">
+            Check-in is anytime after 2PM and check-out by 11AM. We can store
+            your luggage for a few days.
+          </p>
+          <a href="#" class="text-decoration-none color-black link"
+            >READ MORE<span class="ms-1"
+              ><i class="ion-ios-plus-empty"></i></span
+          ></a>
+        </div>
+        <div class="rules__img">
+          <img
+            src="https://alloggio.qodeinteractive.com/wp-content/uploads/2020/03/h1-img-01.jpg"
+            alt="rules"
+          />
+        </div>
+      </div>
+    </section>
+    <div class="hero text-center">
+      <h3 class="mb-3 h1">Malmö’s B’n’B Amenities</h3>
+      <p class="m-0 h4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <section class="feature">
+      <div class="container">
+        <ul class="d-flex justify-content-evenly">
+          <li class="feature__icon list-unstyled text-center">
+            <i class="ion-iphone"></i><br />FAST WIFI
+          </li>
+          <li class="feature__icon list-unstyled text-center">
+            <i class="ion-ios-home-outline"></i><br />COMFY
+          </li>
+          <li class="feature__icon list-unstyled text-center">
+            <i class="ion-ios-heart-outline"></i><br />WARM
+          </li>
+          <li class="feature__icon list-unstyled text-center">
+            <i class="ion-ios-locked-outline"></i><br />SAFE
+          </li>
+          <li class="feature__icon list-unstyled text-center">
+            <i class="ion-ios-alarm-outline"></i><br />ALARM
+          </li>
+          <li class="feature__icon list-unstyled text-center">
+            <i class="ion-ios-wineglass-outline"></i><br />SERVICE
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="gallery position-relative">
+      <div class="container text-center">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/centered-slider-img-1.jpg"
+                class="d-block w-50 gallery__img"
+                alt="..."
+              />
+              <div
+                class="
+                  carousel-caption
+                  d-none d-md-block
+                  slide-caption-position
+                "
+              >
+                <h3 class="h2">Included in the Room Rate</h3>
+                <p class="h5">International breakfast from 07 to 11</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/centered-slider-img-2.jpg"
+                class="d-block w-50 gallery__img"
+                alt="..."
+              />
+              <div
+                class="
+                  carousel-caption
+                  d-none d-md-block
+                  slide-caption-position
+                "
+              >
+                <h3 class="h2">Included in the Room Rate</h3>
+                <p class="h5">International breakfast from 07 to 11</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/centered-slider-img-3.jpg"
+                class="d-block w-50 gallery__img"
+                alt="..."
+              />
+              <div
+                class="
+                  carousel-caption
+                  d-none d-md-block
+                  slide-caption-position
+                "
+              >
+                <h3 class="h2">Included in the Room Rate</h3>
+                <p class="h5">International breakfast from 07 to 11</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/centered-slider-img-04.jpg"
+                class="d-block w-50 gallery__img"
+                alt="..."
+              />
+              <div
+                class="
+                  carousel-caption
+                  d-none d-md-block
+                  slide-caption-position
+                "
+              >
+                <h3 class="h2">Included in the Room Rate</h3>
+                <p class="h5">International breakfast from 07 to 11</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/centered-slider-img-05.jpg"
+                class="d-block w-50 gallery__img"
+                alt="..."
+              />
+              <div
+                class="
+                  carousel-caption
+                  d-none d-md-block
+                  slide-caption-position
+                "
+              >
+                <h3 class="h2">Included in the Room Rate</h3>
+                <p class="h5">International breakfast from 07 to 11</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="gallery__bg position-absolute"></div>
+      </div>
+    </section>
+    <div class="hero hero-2 text-center mt-5 pb-0">
+      <h3 class="mb-3 h1">Edge B’n’B Offers and Events</h3>
+      <p class="m-0 h4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <section class="review">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="review__card text-center">
+              <img
+                src="img/h1-img-03.png"
+                alt="customer"
+                class="review__card-avatar m-4"
+              />
+              <h3 class="h2">"Best time"</h3>
+              <p class="h4">
+                Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed
+                do eius mod tempor inci didunt ut inde us la bore.
+              </p>
+              <p class="h5">Andreas Mjøs</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="review__card text-center">
+              <img
+                src="img/h1-img-04.png"
+                alt="customer"
+                class="review__card-avatar m-4"
+              />
+              <h3 class="h2">"A great find"</h3>
+              <p class="h4">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eufugiat nulla pariatur non proident.
+              </p>
+              <p class="h5">Mary Cruz</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="review__card text-center">
+              <img
+                src="img/h1-img-05.png"
+                alt="customer"
+                class="review__card-avatar m-4"
+              />
+              <h3 class="h2">"Nice position"</h3>
+              <p class="h4">
+                Sed ut perspiciatis unde omnis iste natus error sit volup accus
+                antium do lorem que laud antium, totam si rem.
+              </p>
+              <p class="h5">Mia Skurdal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog">
+      <div class="container">
+        <div class="row gx-4">
+          <div class="col-4">
+            <div class="blog__card">
+              <div class="blog__img">
+                <img
+                  src="img/blog-list-img-1.jpg"
+                  alt="blog"
+                  class="w-100 mb-4"
+                />
+              </div>
+              <p class="blog__card-date h5 mb-0">March 19, 2020</p>
+              <h3 class="h2">A Night in Norway</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+              <a href="#" class="text-decoration-none color-black link"
+                >READ MORE<span class="ms-1"
+                  ><i class="ion-ios-plus-empty"></i></span
+              ></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="blog__card">
+              <div class="blog__img">
+                <img
+                  src="img/blog-list-img-2.jpg"
+                  alt="blog"
+                  class="w-100 mb-4"
+                />
+              </div>
+              <p class="blog__card-date h5 mb-0">March 19, 2020</p>
+              <h3 class="h2">A Night in Norway</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+              <a href="#" class="text-decoration-none color-black link"
+                >READ MORE<span class="ms-1"
+                  ><i class="ion-ios-plus-empty"></i></span
+              ></a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="blog__card">
+              <div class="blog__img">
+                <img
+                  src="img/blog-list-img-3.jpg"
+                  alt="blog"
+                  class="w-100 mb-4"
+                />
+              </div>
+              <p class="blog__card-date h5 mb-0">March 19, 2020</p>
+              <h3 class="h2">A Night in Norway</h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam
+              </p>
+              <a href="#" class="text-decoration-none color-black link"
+                >READ MORE<span class="ms-1"
+                  ><i class="ion-ios-plus-empty"></i></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="email">
+      <div
+        class="email__textbox d-flex align-items-center justify-content-center"
+      >
+        <i class="ion-ios-email-outline"></i>
+        <p class="h2 mx-4 mb-0">Join our weekly Newsletter</p>
+        <input type="text" placeholder="Email Address" />
+        <a href="#" class="btn btn-outline-dark ms-4">SIGN ME UP</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="contact">
+        <div class="row gx-5">
+          <div class="col-4">
+            <div class="contact__about">
+              <h3 class="h2 mb-3">About</h3>
+              <p class="mb-5">
+                Welcome to Alloggio, where comfort is everything. Beautiful room
+                presentations, straightforward booking & reservation options, &
+                a whole lot more awaits here.
+              </p>
+              <img src="img/footer-clients.png" alt="client" />
+            </div>
+          </div>
+          <div class="col-2 px-2">
+            <div class="contact__contact">
+              <h3 class="h2 mb-3">Contact</h3>
+              <p class="mb-1">A:<a href="#">Via Venti Settembre, Roma</a></p>
+              <p class="mb-1">P:<a href="#">+31 555 777 83</a></p>
+              <p class="mb-1">App: Viber, WhatsApp</p>
+              <p class="mb-5">E:<a href="#">info@allogio.com</a></p>
+              <a href="#" class="text-decoration-none color-black link"
+                >SHOW ON MAP<span class="ms-1"
+                  ><i class="ion-ios-plus-empty"></i></span
+              ></a>
+            </div>
+          </div>
+          <div class="col-3 px-5">
+            <div class="contact__pay">
+              <h3 class="h2 mb-3">Payment methods</h3>
+              <p class="h5 mb-4">
+                Pay any way you choose, we support all payment options.
+              </p>
+              <div class="contact__pay-card">
+                <a href="#"><i class="fab fa-cc-paypal"></i></a>
+                <a href="#"><i class="fab fa-cc-visa"></i></a>
+                <a href="#"><i class="fab fa-cc-mastercard"></i></a>
+                <a href="#"><i class="fab fa-cc-amex"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 px-5">
+            <div class="contact__social">
+              <h3 class="h2 mb-3">Get Social</h3>
+              <p class="h5 mb-4">
+                Follow us on social media and keep in touch with Alloggio.
+              </p>
+              <div class="contact__social-icon">
+                <a href="#"><i class="ion-social-github-outline"></i></a>
+                <a href="#"><i class="ion-social-twitter-outline"></i></a>
+                <a href="#"><i class="ion-social-facebook-outline"></i></a>
+                <a href="#"><i class="ion-social-tumblr-outline"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__textbox text-center py-3">
+        <p class="m-0">© Copyright Qode Interactive</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
