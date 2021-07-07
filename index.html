@@ -26,78 +26,92 @@
     />
     <link
       rel="stylesheet"
-      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
     />
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
-    <header class="header d-flex justify-content-between align-items-center">
-      <div class="header__weather d-flex align-items-center">
-        <p class="header__weather-city m-0 me-3">Rome</p>
-        <i class="ion-ios-sunny-outline me-2"></i>
-        <p class="header__weather-temp m-0">28°C</p>
+    <header class="header d-none d-xl-block">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="header__weather d-flex align-items-center">
+          <p class="header__weather-city m-0 me-3">Rome</p>
+          <i class="ion-ios-sunny-outline me-2"></i>
+          <p class="header__weather-temp m-0">28°C</p>
+        </div>
+        <div class="header__nav">
+          <ul class="d-flex align-items-center m-0 list-unstyled">
+            <li class="header__nav-item mx-4">
+              <a
+                href="#"
+                class="
+                  header__nav-link
+                  text-decoration-none text-uppercase
+                  active
+                "
+                >Home</a
+              >
+            </li>
+            <li class="header__nav-item mx-4">
+              <a
+                href="#"
+                class="header__nav-link text-decoration-none text-uppercase"
+                >Rooms</a
+              >
+            </li>
+            <li class="header__nav-item mx-4">
+              <a
+                href="#"
+                class="header__nav-link text-decoration-none text-uppercase"
+                >Pages</a
+              >
+            </li>
+            <li class="header__nav-item mx-4">
+              <a href="#"
+                ><img src="img/logo-default.png" alt="" class="header__logo"
+              /></a>
+            </li>
+            <li class="header__nav-item mx-4">
+              <a
+                href="#"
+                class="header__nav-link text-decoration-none text-uppercase"
+                >Gallery</a
+              >
+            </li>
+            <li class="header__nav-item mx-4">
+              <a
+                href="#"
+                class="header__nav-link text-decoration-none text-uppercase"
+                >Blog</a
+              >
+            </li>
+            <li class="header__nav-item mx-4">
+              <a
+                href="#"
+                class="header__nav-link text-decoration-none text-uppercase"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <p class="header__email m-0">
+          <a href="#" class="header__email-link text-decoration-none">
+            alloggio@qode.com
+          </a>
+        </p>
       </div>
-      <div class="header__nav">
-        <ul class="d-flex align-items-center m-0 list-unstyled">
-          <li class="header__nav-item mx-4">
-            <a
-              href="#"
-              class="
-                header__nav-link
-                text-decoration-none text-uppercase
-                active
-              "
-              >Home</a
-            >
-          </li>
-          <li class="header__nav-item mx-4">
-            <a
-              href="#"
-              class="header__nav-link text-decoration-none text-uppercase"
-              >Rooms</a
-            >
-          </li>
-          <li class="header__nav-item mx-4">
-            <a
-              href="#"
-              class="header__nav-link text-decoration-none text-uppercase"
-              >Pages</a
-            >
-          </li>
-          <li class="header__nav-item mx-4">
-            <a href="#"
-              ><img src="img/logo-default.png" alt="" class="header__logo"
-            /></a>
-          </li>
-          <li class="header__nav-item mx-4">
-            <a
-              href="#"
-              class="header__nav-link text-decoration-none text-uppercase"
-              >Gallery</a
-            >
-          </li>
-          <li class="header__nav-item mx-4">
-            <a
-              href="#"
-              class="header__nav-link text-decoration-none text-uppercase"
-              >Blog</a
-            >
-          </li>
-          <li class="header__nav-item mx-4">
-            <a
-              href="#"
-              class="header__nav-link text-decoration-none text-uppercase"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-      <p class="header__email m-0">
-        <a href="#" class="header__email-link text-decoration-none">
-          alloggio@qode.com
-        </a>
-      </p>
     </header>
+    <div class="d-xl-none">
+      <div
+        class="header__rwd d-flex justify-content-between align-items-center"
+      >
+        <img
+          src="https://alloggio.qodeinteractive.com/wp-content/uploads/2020/04/logo.png"
+          alt="logo"
+          class="header__logo-small ms-4"
+        />
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
     <section class="jumbotron">
       <div class="jumbotron__container position-relative">
         <div
@@ -124,53 +138,114 @@
           >
         </div>
       </div>
-
-      <div class="jumbotron__booking d-flex align-items-end container">
-        <div class="form-check-in mx-2">
-          <label for="checkin">CHECK-IN</label>
-          <input
-            type="date"
-            name="checkin"
-            id="checkin"
-            class="form-control"
-            value="2021-07-01"
-          />
+      <div class="d-none d-xl-block">
+        <div class="jumbotron__booking d-flex align-items-end container">
+          <div class="form-check-in mx-2">
+            <label for="checkin">CHECK-IN</label>
+            <input
+              type="date"
+              name="checkin"
+              id="checkin"
+              class="form-control"
+              value="2021-07-01"
+            />
+          </div>
+          <div class="form-check-out mx-2">
+            <label for="checkout">CHECK-OUT</label>
+            <input
+              type="date"
+              name="checkout"
+              id="checkout"
+              class="form-control"
+              value="2021-07-01"
+            />
+          </div>
+          <div class="form-room mx-2">
+            <label for="room">ROOMS</label>
+            <select name="room" id="room" class="form-select">
+              <option selected value="1">1 Room</option>
+              <option value="2">2 Room</option>
+              <option value="3">3 Room</option>
+              <option value="4">4 Room</option>
+              <option value="5">5 Room</option>
+              <option value="6">6 Room</option>
+              <option value="7">7 Room</option>
+            </select>
+          </div>
+          <div class="form-guest mx-4">
+            <label for="guest">Guests</label>
+            <select name="guest" id="guest" class="form-select">
+              <option selected value="1">1 Adult</option>
+              <option value="2">2 Adult</option>
+              <option value="3">3 Adult</option>
+              <option value="4">4 Adult</option>
+            </select>
+          </div>
+          <a href="#" class="btn btn-outline-dark mx-2 form-btn">BOOK NOW</a>
         </div>
-        <div class="form-check-out mx-2">
-          <label for="checkout">CHECK-OUT</label>
-          <input
-            type="date"
-            name="checkout"
-            id="checkout"
-            class="form-control"
-            value="2021-07-01"
-          />
+      </div>
+      <div class="jumbotron__booking container d-xl-none">
+        <div class="row mb-3">
+          <div class="col-6">
+            <div class="form-check-in mx-2">
+              <label for="checkin">CHECK-IN</label>
+              <input
+                type="date"
+                name="checkin"
+                id="checkin"
+                class="form-control w-100"
+                value="2021-07-01"
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-check-out mx-2">
+              <label for="checkout">CHECK-OUT</label>
+              <input
+                type="date"
+                name="checkout"
+                id="checkout"
+                class="form-control w-100"
+                value="2021-07-01"
+              />
+            </div>
+          </div>
         </div>
-        <div class="form-room mx-2">
-          <label for="room">ROOMS</label>
-          <select name="room" id="room" class="form-select">
-            <option selected value="1">1 Room</option>
-            <option value="2">2 Room</option>
-            <option value="3">3 Room</option>
-            <option value="4">4 Room</option>
-            <option value="5">5 Room</option>
-            <option value="6">6 Room</option>
-            <option value="7">7 Room</option>
-          </select>
+        <div class="row mb-4">
+          <div class="col-6">
+            <div class="form-room mx-2">
+              <label for="room">ROOMS</label>
+              <select name="room" id="room" class="form-select w-100">
+                <option selected value="1">1 Room</option>
+                <option value="2">2 Room</option>
+                <option value="3">3 Room</option>
+                <option value="4">4 Room</option>
+                <option value="5">5 Room</option>
+                <option value="6">6 Room</option>
+                <option value="7">7 Room</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-guest mx-2">
+              <label for="guest">GUESTS</label>
+              <select name="guest" id="guest" class="form-select w-100">
+                <option selected value="1">1 Adult</option>
+                <option value="2">2 Adult</option>
+                <option value="3">3 Adult</option>
+                <option value="4">4 Adult</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="form-guest mx-4">
-          <label for="guest">Guests</label>
-          <select name="guest" id="guest" class="form-select">
-            <option selected value="1">1 Adult</option>
-            <option value="2">2 Adult</option>
-            <option value="3">3 Adult</option>
-            <option value="4">4 Adult</option>
-          </select>
+        <div class="row">
+          <div class="col mx-2">
+            <a href="#" class="btn btn-outline-dark form-btn w-100">BOOK NOW</a>
+          </div>
         </div>
-        <a href="#" class="btn btn-outline-dark mx-2 form-btn">BOOK NOW</a>
       </div>
     </section>
-    <div class="hero text-center">
+    <div class="hero d-none d-lg-block text-center">
       <h3 class="mb-3 h1">Urban Spirit of Helsinki</h3>
       <p class="m-0 h4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -181,7 +256,7 @@
     </div>
     <section class="rooms">
       <div class="rooms__container row position-relative">
-        <div class="col-6 rooms__card--1">
+        <div class="col-12 col-md-6 rooms__card--1">
           <div>
             <div class="rooms__card-img">
               <img src="img/h1-room-img-01.jpg" alt="Room01" />
@@ -205,9 +280,9 @@
               ></a>
             </div>
           </div>
-          <div class="bg-custom bg--1"></div>
+          <div class="bg-custom bg--1 d-none d-xl-block"></div>
         </div>
-        <div class="col-6 rooms__card--2">
+        <div class="col-12 col-md-6 rooms__card--2">
           <div>
             <div class="rooms__card-img">
               <img src="img/h1-room-img-02.jpg" alt="Room02" />
@@ -231,7 +306,7 @@
               ></a>
             </div>
           </div>
-          <div class="bg-custom bg--2"></div>
+          <div class="bg-custom bg--2 d-none d-xl-block"></div>
         </div>
       </div>
     </section>
@@ -256,7 +331,7 @@
         </div>
       </div>
     </section>
-    <div class="hero text-center">
+    <div class="hero d-none d-lg-block text-center">
       <h3 class="mb-3 h1">Malmö’s B’n’B Amenities</h3>
       <p class="m-0 h4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -340,7 +415,7 @@
               <div
                 class="
                   carousel-caption
-                  d-none d-md-block
+                  d-none d-xxl-block
                   slide-caption-position
                 "
               >
@@ -357,7 +432,7 @@
               <div
                 class="
                   carousel-caption
-                  d-none d-md-block
+                  d-none d-xxl-block
                   slide-caption-position
                 "
               >
@@ -374,7 +449,7 @@
               <div
                 class="
                   carousel-caption
-                  d-none d-md-block
+                  d-none d-xxl-block
                   slide-caption-position
                 "
               >
@@ -391,7 +466,7 @@
               <div
                 class="
                   carousel-caption
-                  d-none d-md-block
+                  d-none d-xxl-block
                   slide-caption-position
                 "
               >
@@ -439,7 +514,7 @@
         <div class="gallery__bg position-absolute"></div>
       </div>
     </section>
-    <div class="hero hero-2 text-center mt-5 pb-0">
+    <div class="hero d-none d-lg-block hero-2 text-center mt-5 pb-0">
       <h3 class="mb-3 h1">Edge B’n’B Offers and Events</h3>
       <p class="m-0 h4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -451,7 +526,7 @@
     <section class="review">
       <div class="container">
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <div class="review__card text-center">
               <img
                 src="img/h1-img-03.png"
@@ -466,7 +541,7 @@
               <p class="h5">Andreas Mjøs</p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <div class="review__card text-center">
               <img
                 src="img/h1-img-04.png"
@@ -481,7 +556,7 @@
               <p class="h5">Mary Cruz</p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-12">
             <div class="review__card text-center">
               <img
                 src="img/h1-img-05.png"
@@ -502,8 +577,8 @@
     <section class="blog">
       <div class="container">
         <div class="row gx-4">
-          <div class="col-4">
-            <div class="blog__card">
+          <div class="col-md-4 col-12">
+            <div class="blog__card ps-0">
               <div class="blog__img">
                 <img
                   src="img/blog-list-img-1.jpg"
@@ -524,8 +599,8 @@
               ></a>
             </div>
           </div>
-          <div class="col-4">
-            <div class="blog__card">
+          <div class="col-md-4 col-12">
+            <div class="blog__card ps-0">
               <div class="blog__img">
                 <img
                   src="img/blog-list-img-2.jpg"
@@ -546,8 +621,8 @@
               ></a>
             </div>
           </div>
-          <div class="col-4">
-            <div class="blog__card">
+          <div class="col-md-4 col-12">
+            <div class="blog__card ps-0">
               <div class="blog__img">
                 <img
                   src="img/blog-list-img-3.jpg"
@@ -575,14 +650,14 @@
       <div
         class="email__textbox d-flex align-items-center justify-content-center"
       >
-        <i class="ion-ios-email-outline"></i>
-        <p class="h2 mx-4 mb-0">Join our weekly Newsletter</p>
+        <i class="ion-ios-email-outline me-2"></i>
+        <p class="h2 mx-4 mb-0 d-none d-md-block">Join our weekly Newsletter</p>
         <input type="text" placeholder="Email Address" />
         <a href="#" class="btn btn-outline-dark ms-4">SIGN ME UP</a>
       </div>
     </section>
     <footer class="footer">
-      <div class="contact">
+      <div class="contact d-none d-lg-block">
         <div class="row gx-5">
           <div class="col-4">
             <div class="contact__about">
@@ -623,6 +698,64 @@
             </div>
           </div>
           <div class="col-3 px-5">
+            <div class="contact__social">
+              <h3 class="h2 mb-3">Get Social</h3>
+              <p class="h5 mb-4">
+                Follow us on social media and keep in touch with Alloggio.
+              </p>
+              <div class="contact__social-icon">
+                <a href="#"><i class="ion-social-github-outline"></i></a>
+                <a href="#"><i class="ion-social-twitter-outline"></i></a>
+                <a href="#"><i class="ion-social-facebook-outline"></i></a>
+                <a href="#"><i class="ion-social-tumblr-outline"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact d-lg-none">
+        <div class="row mb-4">
+          <div class="col-12 col-md-6">
+            <div class="contact__about mb-3">
+              <h3 class="h2 mb-3">About</h3>
+              <p class="mb-5">
+                Welcome to Alloggio, where comfort is everything. Beautiful room
+                presentations, straightforward booking & reservation options, &
+                a whole lot more awaits here.
+              </p>
+              <img src="img/footer-clients.png" alt="client" />
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="contact__contact">
+              <h3 class="h2 mb-3">Contact</h3>
+              <p class="mb-1">A:<a href="#">Via Venti Settembre, Roma</a></p>
+              <p class="mb-1">P:<a href="#">+31 555 777 83</a></p>
+              <p class="mb-1">App: Viber, WhatsApp</p>
+              <p class="mb-5">E:<a href="#">info@allogio.com</a></p>
+              <a href="#" class="text-decoration-none color-black link"
+                >SHOW ON MAP<span class="ms-1"
+                  ><i class="ion-ios-plus-empty"></i></span
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="contact__pay mb-3">
+              <h3 class="h2 mb-3">Payment methods</h3>
+              <p class="h5 mb-4">
+                Pay any way you choose, we support all payment options.
+              </p>
+              <div class="contact__pay-card">
+                <a href="#"><i class="fab fa-cc-paypal"></i></a>
+                <a href="#"><i class="fab fa-cc-visa"></i></a>
+                <a href="#"><i class="fab fa-cc-mastercard"></i></a>
+                <a href="#"><i class="fab fa-cc-amex"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
             <div class="contact__social">
               <h3 class="h2 mb-3">Get Social</h3>
               <p class="h5 mb-4">
